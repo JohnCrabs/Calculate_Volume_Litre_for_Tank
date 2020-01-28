@@ -32,12 +32,14 @@ void MainWindow::calcValues() {
     ui->VolumeValue->setStyleSheet("QLabel {color: red;}");
     ui->CurrLitreValue->setStyleSheet("QLabel {color: red;}");
     ui->LitreValue->setStyleSheet("QLabel {color: red;}");
+    ui->litrePerCMvalue->setStyleSheet("QLabel {color: red;}");
     ui->PriceValue->setStyleSheet("QLabel {color: red;}");
 
     //Write Output
     ui->VolumeValue->setText(QString::number(volume) + " Litre");
     ui->CurrLitreValue->setText(QString::number(volume_for_z_value) + " Litre");
     ui->LitreValue->setText(QString::number(litre_to_fill) + " Litre");
+    ui->litrePerCMvalue->setText(QString::number(volume / (z_value * 100)) + " Litre/cm");
     ui->PriceValue->setText(QString::number(price_for_fill));
 }
 
